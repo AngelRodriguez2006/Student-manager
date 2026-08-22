@@ -1,5 +1,19 @@
+import json
+import os
 books = []
 read_books = []
+
+source = "book_list.json"
+
+if os.path.exists(source):
+     if os.path.getsize(source) > 0:
+          with open(source, "r", encoding="utf-8") as f:
+               convert_to_python = json.loads(f.read())
+
+          books.append(convert_to_python)
+
+
+
 
 #Funcion para agregar libros
 def add_book():
@@ -8,6 +22,11 @@ def add_book():
      author = input(f"Who's the author of -{title}-")
      status = "No leido"
      books.append({"Titulo": title, "Autor": author, "Leido": status})
+
+     convert_to_json = json.dumps(books,indent=2)
+
+     with open(source, "w", encoding="utf-8") as f:
+          f.write(convert_to_json)
 
 #Funcion para mostrar los libros agregados
 def show_books():
@@ -65,6 +84,7 @@ def show_read_books ():
 def delete_books():
 
      if not books:
+          open(source,"w", encoding="utf-8").close()
           print("No books have been added")
      else:
           delete = input("Which book would you like to delete?")
