@@ -134,6 +134,7 @@ def menu():
        print("5.Show completed tasks. ")
        print("6.Search tasks. ")
        print("7.Clear tasks. ")
+       print("8.Exit")
 
        select_option = input("Choose an option. ")
 
@@ -205,6 +206,10 @@ def menu():
            print(separator)
            print(clear_tasks(yes_no))
            print(separator)
+
+       elif select_option == "8":
+           print("Closing menu...")
+           break
 
       
                  
