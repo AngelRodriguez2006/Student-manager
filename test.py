@@ -1,7 +1,11 @@
-lista = [{"poco": 0}, {"paca":1}]
+lista = {
+    "poco": 100
+},{"poco": 201}
 
-compress = (list for list in lista)
-print(len(lista))
+valores = 0
 
-for list in lista:
-    print (len(lista))
+for value in lista:
+    valores += value["poco"] 
+    
+
+print(valores)
