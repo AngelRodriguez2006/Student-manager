@@ -1,0 +1,37 @@
+[
+  {
+    "Title": "Bortex",
+    "Author": "as",
+    "Status": "Available",
+    "Read": false,
+    "Date": "2026-09-12 13:46"
+  },
+  {
+    "Title": "hitors",
+    "Author": "lor",
+    "Status": "Available",
+    "Read": false,
+    "Date": "2026-09-12 13:46"
+  },
+  {
+    "Title": "loste",
+    "Author": "s",
+    "Status": "Available",
+    "Read": false,
+    "Date": "2026-09-12 13:47"
+  },
+  {
+    "Title": "azules",
+    "Author": "sd",
+    "Status": "Available",
+    "Read": true,
+    "Date": "2026-09-12 13:48"
+  },
+  {
+    "Title": "Morty",
+    "Author": "moro",
+    "Status": "Borrowed",
+    "Read": true,
+    "Date": "2026-09-12 22:40"
+  }
+]
