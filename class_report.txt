@@ -1,0 +1,41 @@
+------------------------------
+     ===CLASS REPORT===
+
+Generated on: 2026-09-30 15:50
+
+Class Stats:
+
+Active students: 4
+Highest average: Angel (85.0)
+Lowest average: Jose (64.0)
+General average: 76.83
+----------
+
+Top  Students
+
+1.Name:Angel
+ Average: 85.0
+2.Name:Carlos
+ Average: 78.5
+3.Name:Sebastian
+ Average: 70.0
+
+----------
+
+Failed students
+
+Jose (64.0)
+
+----------
+
+All students
+
+1.Angel [90.0, 80.0]
+
+2.Sebastian [70.0]
+
+3.Carlos [67.0, 90.0]
+
+4.Jose [64.0]
+
+------------------------------

@@ -75,20 +75,18 @@ def find_book(book_title):
 
 def search_book(title):    
 
-    found,_,_ = find_book(title)
+    found,_,i = find_book(title)
 
     if found:
-       _,_,i = find_book(title)
        return True, i
     return False, None
 
 
 def delete_book(title):
 
-    found,_,_ = find_book(title)
+    found,_,i = find_book(title)
 
     if found:
-        _,_,i = find_book(title)
         books.pop(i)
         save_data()
         return True
@@ -96,10 +94,9 @@ def delete_book(title):
              
 def mark_as_read(title):
 
-    found,_,_ = find_book(title)
+    found,book,_ = find_book(title)
 
     if found:
-        _,book,_ = find_book(title)
         book["Read"] = True
         save_data()
         return True
@@ -108,10 +105,9 @@ def mark_as_read(title):
 
 def borrow_book(title):
 
-    found,_,_ = find_book(title)
+    found,book,_ = find_book(title)
 
     if found:
-        _,book,_ = find_book(title)
         if book["Status"] == "Available":
             book["Status"] = "Borrowed"
             save_data()
@@ -121,17 +117,16 @@ def borrow_book(title):
 
 def return_book(title):
 
-   found,_,_ = find_book(title)
+   found,book,_ = find_book(title)
 
    if found:
-           _,book,_ = find_book(title)
            if book["Status"] == "Borrowed":
                book["Status"] = "Available"
                save_data()
                return True
    return False
 
-def borrowed_available_books (status):
+def is_borrowed_available_books (status):
 
     if books:
         for book in books:
@@ -248,7 +243,7 @@ def menu():
 
                 case "8":
 
-                    if borrowed_available_books("Available"):
+                    if is_borrowed_available_books("Available"):
 
                         for i,book in enumerate(sorted(books, key =lambda x: x["Title"].lower()),start=1):
                             if book["Status"] == "Available":
@@ -265,7 +260,7 @@ def menu():
 
                 case "9":
 
-                     if  borrowed_available_books("Borrowed"):
+                     if  is_borrowed_available_books("Borrowed"):
                         for i,book in enumerate(sorted(books, key =lambda x: x["Title"].lower()),start=1):
                             if book["Status"] == "Borrowed":
                                 print(f"{i}.{book["Title"]}")

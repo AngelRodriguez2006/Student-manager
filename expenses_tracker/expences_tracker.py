@@ -12,6 +12,13 @@ def load_data ():
 
     with open(source,"r",encoding="utf-8") as f:
        return json.loads(f.read())
+
+def save_data ():
+   with open(source,"w",encoding="utf-8") as f:
+      f.write(json.dumps(expenses, indent=2))
+
+def clear_data ():
+   open(source,"w",encoding="utf-8").close()
     
 if os.path.exists(source):
    if os.path.getsize(source) > 0:
@@ -22,14 +29,9 @@ if os.path.exists(source):
 
    else:
       print("No previous data found")
+else:
+   clear_data()
       
-
-def save_data ():
-   with open(source,"w",encoding="utf-8") as f:
-      f.write(json.dumps(expenses, indent=2))
-
-def clear_data ():
-   open(source,"w",encoding="utf-8").close()
 
 def add_expense (description,amount,category):
 

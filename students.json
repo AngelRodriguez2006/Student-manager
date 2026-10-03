@@ -1,0 +1,32 @@
+[
+  {
+    "Name": "Angel",
+    "Grades": [
+      90.0,
+      80.0
+    ]
+  },
+  {
+    "Name": "Sebastian",
+    "Grades": [
+      70.0
+    ]
+  },
+  {
+    "Name": "Carlos",
+    "Grades": [
+      67.0,
+      90.0
+    ]
+  },
+  {
+    "Name": "Jose",
+    "Grades": [
+      64.0
+    ]
+  },
+  {
+    "Name": "joselito",
+    "Grades": []
+  }
+]
